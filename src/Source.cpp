@@ -14,6 +14,7 @@ int main(int argc, char* arg[]){
 			std::cerr << "Invalid input - Should be a number!\n";
 		}
 	}
+
 	int simCount = std::stoi(arg[1]);
 	std::pair<double,double> results = MontyHall::playGame(simCount);
 	std::cout << "Success rate if you don't switch doors: " << results.first * 100 << "%!\n";

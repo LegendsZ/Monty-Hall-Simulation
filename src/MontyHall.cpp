@@ -1,4 +1,5 @@
 #include <cstdlib>
+#include <time.h>
 
 #include "/Users/abaskar/Projects/Monty-Hall-Simulation/include/MontyHall.h"
 
@@ -33,6 +34,7 @@ namespace MontyHall{
     std::pair<double, double> playGame(int numGames) {
         int successIfSwitch = 0;
         int successIfNotSwitch = 0;
+        srand(time(0));
         for (int i = 0; i < numGames; ++i) {
             std::array<int, 3> doors = generateDoors();
             int choice = rand() % 3;
